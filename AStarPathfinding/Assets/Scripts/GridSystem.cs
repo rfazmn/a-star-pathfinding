@@ -71,7 +71,7 @@ public class GridSystem : MonoBehaviour
         foreach (var node in grid)
         {
             Gizmos.color = node.obstacle ? Color.red : Color.white;
-            Gizmos.DrawCube(node.worldPosition, Vector3.one * .9f);
+            Gizmos.DrawCube(node.worldPosition, Vector3.one * nodeSize - Vector3.one *.1f);
         }
     }
 }
