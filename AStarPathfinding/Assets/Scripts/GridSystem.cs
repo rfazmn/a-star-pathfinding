@@ -27,7 +27,6 @@ public class GridSystem : MonoBehaviour
                 Vector2 gridPos = new Vector2(x, y);
                 Vector3 worldPos = gridPos - offset;
                 RaycastHit2D hit = Physics2D.BoxCast(worldPos, Vector2.one * nodeSize, 0f, Vector3.forward, 1f, obstacleLayer);
-                Physics2D.CircleCast(worldPos, nodeRadius, Vector2.up, 1f, obstacleLayer);
                 Node node = new Node(new Vector2Int(x, y), worldPos, hit.transform != null);
                 grid[x, y] = node;
             }
